@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "TCoordenadas.h"
 #include "TCelula.h"
 #include "TPalavra.h"
@@ -85,7 +87,7 @@ for (int i = 0; i < cp-> linhas; i++){
             for (k = 1; k < tamanho; k++){ // na direcao atual, verifica letra por eltra
                 TCelula *proximo = NULL; // encontra o proximo vizinho da direcao
                 if (dl == 0){
-                    proximo = (dl > 0) ? cel->direita : cel->esquerda; // horizontalmente
+                    proximo = (dc > 0) ? cel->direita : cel->esquerda; // horizontalmente
                 } else if (dc == 0) {
                     proximo = (dl > 0) ? cel->abaixo : cel->acima; // verticalmente
                 } else {
@@ -94,7 +96,7 @@ for (int i = 0; i < cp-> linhas; i++){
                         proximo = (dc > 0) ? temp->direita : temp->esquerda;
                     }
                 }
-                // verfiica se o proximo é valido
+                // verfiica se o proximo ï¿½ valido
                 if (proximo == NULL || proximo-> linha == -1 || proximo-> coluna == -1 || proximo-> letra != palavra->palavra[k])
                     break;
                 cel = proximo;

@@ -32,8 +32,8 @@ while (atual != cabecaLinha && atual-> coluna < novaCelula-> coluna){
 // insere celula ano meio da anterior e da atual
 novaCelula-> direita = atual;
 novaCelula-> esquerda = anterior;
-atual-> direita = novaCelula;
-anterior-> esquerda = novaCelula;
+anterior-> direita = novaCelula;
+atual-> esquerda = novaCelula;
 return 1; // sucesso
 }
 
@@ -48,10 +48,10 @@ while (atual != cabecaLinha && atual-> linha < novaCelula-> linha){
     atual = atual-> abaixo;
 }
 // insere celula no meio da anterior e da atual
-novaCelula-> acima = atual;
-novaCelula-> abaixo = anterior;
-atual-> acima = novaCelula;
+novaCelula-> abaixo = atual;
+novaCelula-> acima = anterior;
 anterior-> abaixo = novaCelula;
+atual-> acima = novaCelula;
 return 1; // sucesso
 }
 

@@ -9,7 +9,7 @@ int coluna; // indice da coluna
 struct TCacaPalavras;  // Forward declaration
 typedef struct TCacaPalavras TCacaPalavras;
 
-int coordenadaCriar (TCoordenada *coordenada, int i, int j);
+void coordenadaCriar (TCoordenada *coordenada, int i, int j);
 
 int coordenadaVerificar (TCoordenada coordenada, TCacaPalavras *cp);
 

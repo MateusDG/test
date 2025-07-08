@@ -1,7 +1,7 @@
 #ifndef TCELULA_H_INCLUDED
 #define TCELULA_H_INCLUDED
 
-typedef struct {
+typedef struct TCelula {
 struct TCelula *direita, *esquerda, *acima, *abaixo; // ponteiros para as posicoes
 int linha, coluna; // posicao na matriz
 char letra; // caractere armazenado

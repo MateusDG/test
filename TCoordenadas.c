@@ -1,10 +1,12 @@
 #include "TCoordenadas.h"
 #include "TCacaPalavras.h"
+#include <stddef.h>
 
-int coordenadaCriar (TCoordenada *coordenada, int i, int j){
-coordenada->linha = i;
-coordenada->coluna = j;
-return coordenada;
+
+void coordenadaCriar (TCoordenada *coordenada, int i, int j){
+    if (coordenada == NULL) return;
+    coordenada->linha = i;
+    coordenada->coluna = j;
 }
 
 int coordenadaVerificar(TCoordenada coordenada, TCacaPalavras *cp) {
